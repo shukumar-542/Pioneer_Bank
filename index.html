@@ -101,6 +101,7 @@
 
             updateSpanText('currentBalance',depositeNumber);
             updateSpanText('currentDeposite',depositeNumber);
+           
 
           
            
@@ -115,10 +116,13 @@
             // const withdrawNumebr = parseFloat(withdrawAmmount);
             const withdrawNumebr = getInput('withdrawAmmount');
 
-            const currentwithdrawBalance = document.getElementById('withdrawBalance').innerText;
-            const currentWithdrawNumber = parseFloat(currentwithdrawBalance);
-            const totalWithdraw = withdrawNumebr + currentWithdrawNumber;
-            document.getElementById('withdrawBalance').innerText = totalWithdraw;
+            // const currentwithdrawBalance = document.getElementById('withdrawBalance').innerText;
+            // const currentWithdrawNumber = parseFloat(currentwithdrawBalance);
+            // const totalWithdraw = withdrawNumebr + currentWithdrawNumber;
+            // document.getElementById('withdrawBalance').innerText = totalWithdraw;
+
+            updateSpanText('withdrawBalance', withdrawNumebr);
+            updateSpanText('currentBalance', -1* withdrawNumebr)
 
             document.getElementById('withdrawAmmount').value = "";
 
